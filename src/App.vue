@@ -1,20 +1,24 @@
 <template>
-  <div id="app">
-    <Navbar/>
-      <b-container class="">
+<div id="app">
+  <Navbar />
+  <b-container class="">
+    <b-row>
+      <b-col cols="8">
         <b-row>
-          <b-col cols="8" class="d-flex align-items-between flex-column left-content">
-          <SearchField/>
-          <ReferencesField/>
-          </b-col>
-          <b-col cols="4">
-          <FilterField/>
-          </b-col>
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-      <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+          <SearchField />
         </b-row>
-    </b-container>
-  </div>
+        <b-row>
+          <ReferencesField />
+        </b-row>
+      </b-col>
+      <b-col cols="4" class="">
+        <FilterField />
+      </b-col>
+      <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+      <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    </b-row>
+  </b-container>
+</div>
 </template>
 
 <script>
@@ -35,46 +39,46 @@ export default {
 </script>
 
 <style>
-.vb > .vb-dragger {
-    z-index: 5;
-    width: 12px;
-    right: 0;
+.vb>.vb-dragger {
+  z-index: 5;
+  width: 12px;
+  right: 0;
 }
 
-.vb > .vb-dragger > .vb-dragger-styler {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: rotate3d(0,0,0,0);
-    transform: rotate3d(0,0,0,0);
-    -webkit-transition:
-        background-color 100ms ease-out,
-        margin 100ms ease-out,
-        height 100ms ease-out;
-    transition:
-        background-color 100ms ease-out,
-        margin 100ms ease-out,
-        height 100ms ease-out;
-    background-color: rgba(184, 184, 184,.1);
-    margin: 5px 5px 5px 0;
-    border-radius: 20px;
-    height: calc(100% - 20px);
-    display: block;
+.vb>.vb-dragger>.vb-dragger-styler {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotate3d(0, 0, 0, 0);
+  transform: rotate3d(0, 0, 0, 0);
+  -webkit-transition:
+    background-color 100ms ease-out,
+    margin 100ms ease-out,
+    height 100ms ease-out;
+  transition:
+    background-color 100ms ease-out,
+    margin 100ms ease-out,
+    height 100ms ease-out;
+  background-color: rgba(184, 184, 184, .1);
+  margin: 5px 5px 5px 0;
+  border-radius: 20px;
+  height: calc(100% - 20px);
+  display: block;
 }
 
-.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
-    background-color: rgba(184, 184, 184,.3);
+.vb.vb-scrolling-phantom>.vb-dragger>.vb-dragger-styler {
+  background-color: rgba(184, 184, 184, .3);
 }
 
-.vb > .vb-dragger:hover > .vb-dragger-styler {
-    background-color: rgba(184, 184, 184, 1);
+.vb>.vb-dragger:hover>.vb-dragger-styler {
+  background-color: rgba(184, 184, 184, 1);
 }
 
-.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
-    background-color: rgba(184, 184, 184, 1);
+.vb.vb-dragging>.vb-dragger>.vb-dragger-styler {
+  background-color: rgba(184, 184, 184, 1);
 }
 
-.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
-    background-color: rgba(184, 184, 184, 1);
+.vb.vb-dragging-phantom>.vb-dragger>.vb-dragger-styler {
+  background-color: rgba(184, 184, 184, 1);
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 #app {
@@ -82,15 +86,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-    background-color: #0e0e0f;
-  height:100vh;
+  background-color: #0e0e0f;
   /* margin-top: 60px; */
 }
-.vue-treeselect__menu-container, .vue-treeselect__menu{
-  position:relative!important;
+.vue-treeselect__menu-container,
+.vue-treeselect__menu {
+  position: relative !important;
 }
-
 .left-content{
-height:558px;
+max-height:467px
 }
 </style>

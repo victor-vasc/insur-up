@@ -1,13 +1,12 @@
 <template>
-<b-col class="mt-2 pb-3 filter-component px-0">
+<b-col class="pb-3 filter-component px-0">
   <div class="justify-content-between d-flex pt-3 mx-3" style="color:white; font-size:24px">
     <p class="mb-0">Filtros</p>
     <p class="mb-0 bullet-menu"><b-icon-three-dots></b-icon-three-dots></p>
   </div>
   <hr class="testte">
-
   <div v-bar> <!-- el1 -->
-  <div class="filter-component-section px-0 mx-0"> <!-- el2 -->
+  <div class="filter-component-section"> <!-- el2 -->
     <!-- your scrollable content -->
     <RegionFilterComponent/>
     <TimeFilterComponent/>
@@ -37,16 +36,14 @@ TimeFilterComponent
 .filter-component {
 background-color: #292a2d;
 border-radius: 10px;
-max-height: 550px;
-min-height:271px;
 font-family: Helvetica;
 }
 .teste{
 color:white;
 }
 .filter-component-section{
-overflow-y:auto;
-max-height: 460px;
+overflow:auto;
+max-height: 485px;
 }
 .bullet-menu{
 position:absolute;

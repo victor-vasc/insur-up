@@ -9,7 +9,7 @@
   <div div v-bar="{
     preventParentScroll: true,
     scrollThrottle: 30,
-}"> <!-- el1 -->
+    }"> <!-- el1 -->
   <div class="references-content"> <!-- el2 -->
     <!-- your scrollable content -->
         <ReferencesComponent/>

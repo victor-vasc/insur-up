@@ -1,5 +1,5 @@
 <template>
-<b-col class="mt-2 mb-3 pb-3 search-component">
+<b-col class="mb-2 pb-3 search-component">
   <div class="d-flex justify-content-end" style="color:white;  font-size:24px">
     <p class="bullet-menu"><b-icon-three-dots></b-icon-three-dots></p>
   </div>
@@ -11,9 +11,6 @@
       </b-button>
     </b-col>
   </b-form>
-  <!-- <b-card class="mt-3" header="Form Data Result">
-    <pre class="m-0">{{ form }}</pre>
-  </b-card> -->
 </b-col>
 </template>
 
