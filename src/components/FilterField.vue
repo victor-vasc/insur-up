@@ -1,0 +1,56 @@
+<template>
+<b-col class="mt-2 pb-3 filter-component px-0">
+  <div class="justify-content-between d-flex pt-3 mx-3" style="color:white; font-size:24px">
+    <p class="mb-0">Filtros</p>
+    <p class="mb-0 bullet-menu"><b-icon-three-dots></b-icon-three-dots></p>
+  </div>
+  <hr class="testte">
+
+  <div v-bar> <!-- el1 -->
+  <div class="filter-component-section px-0 mx-0"> <!-- el2 -->
+    <!-- your scrollable content -->
+    <RegionFilterComponent/>
+    <TimeFilterComponent/>
+    <KeywordsFilterComponent/>
+  </div>
+  <!-- dragger will be automatically added here -->
+</div>
+</b-col>
+</template>
+
+<script>
+import RegionFilterComponent from './RegionFilterComponent.vue'
+import TimeFilterComponent from './TimeFilterComponent.vue'
+import KeywordsFilterComponent from './KeywordsFilterComponent.vue'
+export default {
+  name: 'FilterField',
+  components: {
+KeywordsFilterComponent,
+RegionFilterComponent,
+TimeFilterComponent
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.filter-component {
+background-color: #292a2d;
+border-radius: 10px;
+max-height: 550px;
+min-height:271px;
+font-family: Helvetica;
+}
+.teste{
+color:white;
+}
+.filter-component-section{
+overflow-y:auto;
+max-height: 460px;
+}
+.bullet-menu{
+position:absolute;
+right:20px;
+top:10px;
+}
+</style>
