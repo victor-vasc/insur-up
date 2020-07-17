@@ -1,13 +1,22 @@
 <template>
   <div class="">
-    <ul class="d-flex justify-content-start text-left list-object pl-2" v-for="item in items" :key="item.titulo">
+    <ul class="d-flex justify-content-start text-left list-object pl-2" v-for="item in items" :key="item">
       <li>
-        <h5 class="mb-0"><b>{{ item.titulo }}</b></h5>
-        <div class="d-flex">
-          <h6 class="mr-3">{{ item.periodo}}</h6>
-          <h6 class="ml-3">Fonte: <b>{{item.fonte }}</b></h6>
-        </div>
-        <div>{{ item.conteudo }}</div>
+        <b-row  align-v="center">
+        <b-col cols="10" class="references">
+          <h5 class="mb-0"><b>{{ item.titulo }}</b></h5>
+          <div class="d-flex">
+            <h6 class="mr-3">{{ item.periodo}}</h6>
+            <h6 class="ml-3">Fonte: <b>{{item.fonte }}</b></h6>
+          </div>
+          <div>{{ item.conteudo }}</div>
+        </b-col>
+        <b-col cols="2" class="rating pl-0 mr-0">
+            <b-link class="p-2"><b-icon :pressed.sync="myToggle" variant="info" font-scale="2" icon="chevron-up"></b-icon></b-link>
+            <!-- <p class="mb-0" style="inline-block">932</p> -->
+            <b-link class="p-2"><b-icon variant="secondary" font-scale="2" icon="chevron-down"></b-icon></b-link>
+        </b-col>
+      </b-row>
         <hr class="mt-2 mb-0">
       </li>
     </ul>
@@ -19,6 +28,7 @@ export default {
   name: 'Test',
   data (){
     return {
+      myToggle: false,
       items: [
       { titulo: 'Vicentin. Dura advertencia de los empresarios al Gobierno por la intervención',
         periodo:'9/06/2020 • 21:58',
@@ -52,7 +62,12 @@ export default {
       },
     ]
     }
+  },
+  computed: {
+  btnStates() {
+    return this.buttons.map(btn => btn.state)
   }
+}
 }
 </script>
 
