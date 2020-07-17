@@ -6,7 +6,7 @@
         <b-button block v-b-toggle.accordion-3 class="time-filter-container-buttom pl-3 d-flex justify-content-between pr-2">Filtrar por período de tempo<b-icon-caret-down-fill class="carret-icon mr-2"></b-icon-caret-down-fill></b-button>
       </b-card-header>
       <b-collapse id="accordion-3" accordion="my-accordion-3" role="tabpanel">
-        <b-card-body>
+        <b-card-body class="px-0 py-0">
           <div class="component teste">
               <treeselect v-model="value"
               :multiple="false"
@@ -29,7 +29,7 @@
 import Treeselect from '@riophae/vue-treeselect'
 // import the styles
 import '@riophae/vue-treeselect/dist/vue-treeselect.css'
-
+import '../assets/css/vue-treeselec-custom.css'
 export default {
   // register the component
   components: {
@@ -81,6 +81,9 @@ export default {
   border-radius:0;
   font-family: Helvetica;
   font-weight: 300;
+}
+.card-header{
+border:none;
 }
 .time-filter-container-buttom, .time-filter-container-buttom:hover, .time-filter-container-buttom:active{
   border:none;

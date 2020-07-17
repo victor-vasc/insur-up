@@ -5,7 +5,7 @@
         <b-button block v-b-toggle.accordion-2 class="region-filter-container-button pl-3 d-flex justify-content-between pr-2">Filtrar por regiões<b-icon-caret-down-fill class="carret-icon mr-2"></b-icon-caret-down-fill></b-button>
       </b-card-header>
       <b-collapse id="accordion-2" accordion="my-accordion-2" role="tabpanel">
-        <b-card-body class="">
+        <b-card-body class="px-0 py-0">
           <div class="component teste">
             <div class="">
               <treeselect v-model="value"
@@ -31,7 +31,7 @@
  import Treeselect from '@riophae/vue-treeselect'
  // import the styles
  import '@riophae/vue-treeselect/dist/vue-treeselect.css'
- // import '../assets/css/vue-treeselec-custom.css'
+ import '../assets/css/vue-treeselec-custom.css'
 
  export default {
      // register the component
@@ -152,12 +152,14 @@ border:none;
 border-radius:0;
 font-family: Helvetica;
 }
-
+.card-header{
+border:none;
+}
 .region-filter-container-button, .region-filter-container-button:active, .region-filter-container-button:focus{
 border:none;
 background-color: #636568!important;
 box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2)!important;
-border-radius:2px;
+border-radius:0px;
 text-align: left;
 font-size: 14px;
 padding: 3px 5px;

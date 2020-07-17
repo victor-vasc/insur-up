@@ -21,7 +21,8 @@
                 <b-form-tag
                 v-for="tag in tags"
                 @remove="removeTag(tag)"
-                :key="tag" :title="tag"
+                :key="tag"
+                :title="tag"
                 variant="info"
                 pill
                 style="font-size:12px;"
@@ -46,7 +47,8 @@
                 <b-form-tag
                 v-for="tag in tags"
                 @remove="removeTag(tag)"
-                :key="tag" :title="tag"
+                :key="tag"
+                :title="tag"
                 variant="info"
                 pill
                 style="font-size:12px;"

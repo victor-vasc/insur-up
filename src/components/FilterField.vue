@@ -9,7 +9,9 @@
   <div class="filter-component-section"> <!-- el2 -->
     <!-- your scrollable content -->
     <RegionFilterComponent/>
+      <hr class="my-3">
     <TimeFilterComponent/>
+      <hr class="my-3">
     <KeywordsFilterComponent/>
   </div>
   <!-- dragger will be automatically added here -->
