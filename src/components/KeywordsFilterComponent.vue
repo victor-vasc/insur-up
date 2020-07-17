@@ -8,22 +8,24 @@
     <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
       <b-card-body>
         <div class="component teste">
-            <b-form-tags v-model="value" no-outer-focus class="mb-2" size="sm" tag-pills>
-              <template v-slot="{ tags, inputAttrs, inputHandlers, addTag, removeTag }">
+            <b-form-tags v-model="value" no-outer-focus class="mb-2" size="sm">
+              <template v-slot="{ tags, inputAttrs, inputHandlers, tagVariant, addTag, removeTag }">
                 <b-input-group class="mb-2" size="sm">
-                  <b-form-input v-bind="inputAttrs" v-on="inputHandlers" placeholder="New tag - Press enter to add" class="form-control"></b-form-input>
+                  <b-form-input v-bind="inputAttrs" v-on="inputHandlers" placeholder="Termos essenciais..." class="form-control"></b-form-input>
                   <b-input-group-append>
-                    <b-button @click="addTag()" variant="primary">Add</b-button>
+                    <b-button @click="addTag()" variant="info" class="btn-add-tags"><b-icon-plus></b-icon-plus></b-button>
                   </b-input-group-append>
                 </b-input-group>
-                <div class="d-inline-block" style="font-size: 1.5rem;">
+                <div class="d-inline-block d-flex justify-content-start" style="font-size: 1.5rem;">
                   <b-form-tag
                   v-for="tag in tags"
                   @remove="removeTag(tag)"
                   :key="tag"
                   :title="tag"
-                  :tag-pills
-                  class="mr-1">{{ tag }}</b-form-tag>
+                  variant="info"
+                  pill
+                  style="font-size:12px;"
+                  class="mr-1 px-2">{{ tag }}</b-form-tag>
                 </div>
               </template>
             </b-form-tags>
@@ -38,7 +40,7 @@
 export default {
   data() {
     return {
-      value: ['apple']
+      value: ['apple', 'orange', 'banana']
     }
   }
 }
@@ -65,8 +67,15 @@ export default {
   font-size: 14px;
   padding: 3px 5px;
 }
-
 .carret-icon {
   transform: scale(0.8);
+}
+.btn-add-tags{
+border-bottom-right-radius:15px;
+border-top-right-radius:15px;
+}
+.form-control{
+/* background-color: red;
+border:1px solid cyan; */
 }
 </style>
