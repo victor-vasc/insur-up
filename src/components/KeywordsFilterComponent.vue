@@ -8,8 +8,8 @@
     <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
       <b-card-body>
         <div class="component teste">
-            <b-form-tags v-model="value" no-outer-focus class="mb-2" size="sm">
-              <template v-slot="{ tags, inputAttrs, inputHandlers, tagVariant, addTag, removeTag }">
+            <b-form-tags v-model="value" no-outer-focus class="mb-2" size="sm" tag-pills>
+              <template v-slot="{ tags, inputAttrs, inputHandlers, addTag, removeTag }">
                 <b-input-group class="mb-2" size="sm">
                   <b-form-input v-bind="inputAttrs" v-on="inputHandlers" placeholder="New tag - Press enter to add" class="form-control"></b-form-input>
                   <b-input-group-append>
@@ -22,7 +22,7 @@
                   @remove="removeTag(tag)"
                   :key="tag"
                   :title="tag"
-                  :variant="tagVariant"
+                  :tag-pills
                   class="mr-1">{{ tag }}</b-form-tag>
                 </div>
               </template>
@@ -38,7 +38,7 @@
 export default {
   data() {
     return {
-      value: ['apple', 'orange', 'banana']
+      value: ['apple']
     }
   }
 }

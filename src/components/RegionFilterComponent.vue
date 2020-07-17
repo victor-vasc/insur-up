@@ -31,6 +31,7 @@
  import Treeselect from '@riophae/vue-treeselect'
  // import the styles
  import '@riophae/vue-treeselect/dist/vue-treeselect.css'
+ // import '../assets/css/vue-treeselec-custom.css'
 
  export default {
      // register the component
