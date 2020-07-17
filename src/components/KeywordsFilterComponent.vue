@@ -6,30 +6,54 @@
       </b-button>
     </b-card-header>
     <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
-      <b-card-body>
-        <div class="component teste">
-            <b-form-tags v-model="value" no-outer-focus class="mb-2" size="sm">
-              <template v-slot="{ tags, inputAttrs, inputHandlers, tagVariant, addTag, removeTag }">
-                <b-input-group class="mb-2" size="sm">
-                  <b-form-input v-bind="inputAttrs" v-on="inputHandlers" placeholder="Termos essenciais..." class="form-control"></b-form-input>
-                  <b-input-group-append>
-                    <b-button @click="addTag()" variant="info" class="btn-add-tags"><b-icon-plus></b-icon-plus></b-button>
-                  </b-input-group-append>
-                </b-input-group>
-                <div class="d-inline-block d-flex justify-content-start" style="font-size: 1.5rem;">
-                  <b-form-tag
-                  v-for="tag in tags"
-                  @remove="removeTag(tag)"
-                  :key="tag"
-                  :title="tag"
-                  variant="info"
-                  pill
-                  style="font-size:12px;"
-                  class="mr-1 px-2">{{ tag }}</b-form-tag>
-                </div>
-              </template>
-            </b-form-tags>
-        </div>
+      <b-card-body class="p-0">
+          <b-form-tags v-model="value" no-outer-focus class=" pt-3 container-tags" size="sm">
+            <template v-slot="{ tags, inputAttrs, inputHandlers, tagVariant, addTag, removeTag }">
+              <b-input-group class="mb-2" size="sm">
+                <b-form-input v-bind="inputAttrs" v-on="inputHandlers" placeholder="Termos essenciais..." class="form-control"></b-form-input>
+                <b-input-group-append>
+                  <b-button @click="addTag()" variant="info" class="btn-add-tags">
+                    <b-icon-plus></b-icon-plus>
+                  </b-button>
+                </b-input-group-append>
+              </b-input-group>
+              <div class="d-inline-block" style="font-size: 1.5rem;">
+                <b-form-tag
+                v-for="tag in tags"
+                @remove="removeTag(tag)"
+                :key="tag" :title="tag"
+                variant="info"
+                pill
+                style="font-size:12px;"
+                class="mr-1 px-2">{{ tag }}</b-form-tag>
+              </div>
+            </template>
+          </b-form-tags>
+      </b-card-body>
+      <hr class="my-1 mx-3">
+      <b-card-body class="p-0">
+          <b-form-tags v-model="value2" no-outer-focus class=" pt-3 container-tags" size="sm">
+            <template v-slot="{ tags, inputAttrs, inputHandlers, tagVariant, addTag, removeTag }">
+              <b-input-group class="mb-2" size="sm">
+                <b-form-input v-bind="inputAttrs" v-on="inputHandlers" placeholder="Termos excluídos..." class="form-control"></b-form-input>
+                <b-input-group-append>
+                  <b-button @click="addTag()" variant="info" class="btn-add-tags">
+                    <b-icon-plus></b-icon-plus>
+                  </b-button>
+                </b-input-group-append>
+              </b-input-group>
+              <div class="d-inline-block" style="font-size: 1.5rem;">
+                <b-form-tag
+                v-for="tag in tags"
+                @remove="removeTag(tag)"
+                :key="tag" :title="tag"
+                variant="info"
+                pill
+                style="font-size:12px;"
+                class="mr-1 px-2">{{ tag }}</b-form-tag>
+              </div>
+            </template>
+          </b-form-tags>
       </b-card-body>
     </b-collapse>
   </b-card>
@@ -40,7 +64,8 @@
 export default {
   data() {
     return {
-      value: ['apple', 'orange', 'banana']
+      value: ['apple', 'orange', 'banana'],
+      value2: ['pera', 'uva', 'abacaxi']
     }
   }
 }
@@ -67,15 +92,23 @@ export default {
   font-size: 14px;
   padding: 3px 5px;
 }
+
 .carret-icon {
   transform: scale(0.8);
 }
-.btn-add-tags{
-border-bottom-right-radius:15px;
-border-top-right-radius:15px;
+
+.btn-add-tags {
+  border-bottom-right-radius: 15px !important;
+  border-top-right-radius: 15px !important;
 }
-.form-control{
-/* background-color: red;
-border:1px solid cyan; */
+
+.form-control input {
+  border-bottom-left-radius: 15px !important;
+  border-top-left-radius: 15px !important;
+}
+
+.container-tags {
+  background-color: rgba(0, 0, 0, .1);
+  border: none;
 }
 </style>
