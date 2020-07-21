@@ -11,12 +11,13 @@
               <treeselect v-model="value"
               :multiple="true"
               :options="options"
-              placeholder="Fontes de notícisas escolhidas..."
+              placeholder="Fontes de notícias escolhidas..."
               :always-open="true"
               :autoFocus="true"
               :appendToBody="false"
               :showCount="true"
               :maxHeight="150"
+              :searchable="false"
               />
             </div>
           </div>

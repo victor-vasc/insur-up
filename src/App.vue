@@ -1,21 +1,23 @@
 <template>
 <div id="app">
-  <Navbar />
+  <Navbar/>
+  <Sidebar/>
   <b-container class="">
     <b-row>
-      <b-col cols="8">
+      <b-col col-sm="12">
         <b-row>
           <SearchField />
         </b-row>
-        <b-row>
+        <!-- <b-row class="d-md-none d-block">
+          <FilterField/>
+        </b-row> -->
+        <b-row class="d-none d-md-block">
           <ReferencesField />
         </b-row>
       </b-col>
-      <b-col cols="4" class="">
-        <FilterField />
+      <b-col cols="4" class="d-none d-lg-block">
+        <FilterField/>
       </b-col>
-      <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-      <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     </b-row>
   </b-container>
 </div>
@@ -24,6 +26,7 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import Navbar from './components/Navbar.vue'
+import Sidebar from './components/Sidebar.vue'
 import SearchField from './components/SearchField.vue'
 import FilterField from './components/FilterField.vue'
 import ReferencesField from './components/ReferencesField.vue'
@@ -31,6 +34,7 @@ export default {
   name: 'App',
   components: {
     Navbar,
+    Sidebar,
     SearchField,
     FilterField,
     ReferencesField
@@ -95,5 +99,8 @@ export default {
 }
 .left-content{
 max-height:467px
+}
+.sidebar-filter-body, .sidebar-filter-header{
+background-color: #0e0e0f;
 }
 </style>

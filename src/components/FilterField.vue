@@ -4,7 +4,7 @@
     <p class="mb-0">Filtros</p>
     <p class="mb-0 bullet-menu"><b-icon-three-dots></b-icon-three-dots></p>
   </div>
-  <hr class="testte">
+  <hr class="">
   <div v-bar> <!-- el1 -->
   <div class="filter-component-section"> <!-- el2 -->
     <!-- your scrollable content -->
@@ -45,7 +45,7 @@ color:white;
 }
 .filter-component-section{
 overflow:auto;
-max-height: 485px;
+max-height: 453px;
 }
 .bullet-menu{
 position:absolute;
