@@ -29,7 +29,8 @@ export default {
     onSubmit(evt) {
       evt.preventDefault()
       // alert(JSON.stringify(this.form))
-      alert("Desculpe, por hora, ainda não é possível realizar pesquisas. Ainda estamos trabalhando nisso!")
+      // alert("Desculpe, por hora, ainda não é possível realizar pesquisas. Ainda estamos trabalhando nisso!")
+      window.open('https://neoxscans.com/','_blank');
     },
     onReset( /*evt*/ ) {
       // evt.preventDefault()
