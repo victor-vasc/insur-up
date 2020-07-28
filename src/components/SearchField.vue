@@ -28,9 +28,14 @@ export default {
   methods: {
     onSubmit(evt) {
       evt.preventDefault()
-      // alert(JSON.stringify(this.form))
-      // alert("Desculpe, por hora, ainda não é possível realizar pesquisas. Ainda estamos trabalhando nisso!")
-      window.open('https://neoxscans.com/','_blank');
+      // alert(JSON.stringify(this.form.search))
+      if(JSON.stringify(this.form.search).replace(/['"]+/g, '') === "testeabc"){
+      alert("Achamos o que você procura!")
+      // window.open('https://dropescan.com/','_blank');
+    } else{
+      alert("Desculpe, por hora, ainda não é possível realizar pesquisas. Ainda estamos trabalhando nisso!")
+      // window.open('https://neoxscans.com/','_blank');
+      }
     },
     onReset( /*evt*/ ) {
       // evt.preventDefault()

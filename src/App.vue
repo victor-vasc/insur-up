@@ -1,8 +1,13 @@
 <template>
 <div id="app">
   <div class="custom-navbar">
-    <b-nav tabs active class="ml-5 pl-5">
-      <b-nav-item v-for="tab in tabs" v-bind:key="tab.name" v-bind:class="['tab-button', { active: currentTab.name === tab.name }]" v-on:click="currentTab = tab" class="mt-4 mb-2 mr-2 subtitle" variant="dark">
+    <b-nav tabs class="ml-5 pl-5 align-bottom d-flex align-items-end">
+      <b-nav-item v-for="tab in tabs"
+                  v-bind:key="tab.name"
+                  v-bind:class="['tab-button', { active: currentTab.name === tab.name }]"
+                  v-on:click="currentTab = tab"
+                  class="mt-4 mb-2 mr-2 subtitle align-bottom "
+                  variant="dark">
         {{ tab.name }}
       </b-nav-item>
     </b-nav>
@@ -35,6 +40,9 @@ var tabs = [{
 // import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
+  props: [
+    'x'
+  ],
   data() {
     return {
       tabs: tabs,
@@ -70,9 +78,9 @@ export default {
 }
 
 .custom-navbar .nav-tabs :not(.active) a {
-color: rgba(255, 255, 255, 0.5)!important
+color: rgba(255, 255, 255, 0.5)!important;
+font-size:18px;
 }
-
 
 .custom-navbar .nav-tabs a {
   color: white
