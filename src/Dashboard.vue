@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <Navbar/>
+  <!-- <Navbar/> -->
   <Sidebar/>
   <b-container class="">
     <b-row>
@@ -25,7 +25,7 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Navbar from './components/Navbar.vue'
+// import Navbar from './components/Navbar.vue'
 import Sidebar from './components/Sidebar.vue'
 import SearchField from './components/SearchField.vue'
 import FilterField from './components/FilterField.vue'
@@ -33,7 +33,7 @@ import ReferencesField from './components/ReferencesField.vue'
 export default {
   name: 'App',
   components: {
-    Navbar,
+    // Navbar,
     Sidebar,
     SearchField,
     FilterField,
