@@ -40,9 +40,6 @@ var tabs = [{
 // import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
-  props: [
-    'x'
-  ],
   data() {
     return {
       tabs: tabs,

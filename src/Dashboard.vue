@@ -31,7 +31,7 @@ import SearchField from './components/SearchField.vue'
 import FilterField from './components/FilterField.vue'
 import ReferencesField from './components/ReferencesField.vue'
 export default {
-  name: 'App',
+  name: 'Dashboard',
   components: {
     // Navbar,
     Sidebar,

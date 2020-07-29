@@ -15,8 +15,10 @@
 </template>
 
 <script>
+import app from '../App.vue'
 export default {
   name: 'SearchField',
+  component: app,
   data() {
     return {
       form: {
@@ -29,11 +31,13 @@ export default {
     onSubmit(evt) {
       evt.preventDefault()
       // alert(JSON.stringify(this.form.search))
-      if(JSON.stringify(this.form.search).replace(/['"]+/g, '') === "testeabc"){
+      if(JSON.stringify(this.form.search).replace(/['"]+/g, '') === "ACS Brasil 2020"){
       alert("Achamos o que você procura!")
+      this.$parent.$parent.currentTab = this.$parent.$parent.tabs[1]
       // window.open('https://dropescan.com/','_blank');
     } else{
-      alert("Desculpe, por hora, ainda não é possível realizar pesquisas. Ainda estamos trabalhando nisso!")
+      alert("Desculpe, por hora, ainda não é possível realizar pesquisas.")
+      alert("Para que possa ter uma ídeia do que será futuramente, pesquise por: 'ACS Brasil 2020'.")
       // window.open('https://neoxscans.com/','_blank');
       }
     },
