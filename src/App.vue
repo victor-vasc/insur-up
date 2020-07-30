@@ -3,7 +3,13 @@
   <b-container>
     <div class="custom-navbar d-flex justify-content-center justify-content-sm-start">
       <b-nav tabs class="align-bottom d-flex align-items-end">
-        <b-nav-item v-for="tab in tabs" v-bind:key="tab.name" v-bind:class="['tab-button', { active: currentTab.name === tab.name }, {disabled: tabs[1]}]" v-on:click="currentTab = tab" class="mt-1 mb-2 mr-2 subtitle align-bottom " variant="dark">
+        <b-nav-item v-for="tab in tabs"
+                    v-bind:key="tab.name"
+                    v-bind:class="['tab-button', { active: currentTab.name === tab.name }, {disabled: tabs[1]}]"
+                    v-on:click="currentTab = tab"
+                    class="mt-1 mb-2 mr-2 subtitle align-bottom "
+                    variant="dark"
+        >
           {{ tab.name }}
         </b-nav-item>
       </b-nav>

@@ -6,8 +6,10 @@
         <b-row align-v="center">
           <b-col cols="12" class="references">
             <b-row class="d-flex">
+              <b-col cols="11">
+                <h5 class="mb-0 mr-4 w-100"><b>{{ item.titulo }}</b></h5>
+              </b-col>
               <b-col cols="7" class="pr-0">
-                <h5 class="mb-0 mr-4 w-75"><b>{{ item.titulo }}</b></h5>
                 <h6 class="my-2">
                   <spam class="d-inline-flex mb-1">Fonte:<b class="ml-2 mr-2">{{item.fonte}}</b></spam><br class="d-block d-sm-none">
                   <spam>{{ item.periodo}}</spam>
@@ -15,7 +17,7 @@
               </b-col>
               <b-col cols="5" class="rating align-self-center d-flex justify-content-lg-end justify-content-sm-start pr-4">
                 <b-link class="p-2">
-                  <b-icon :pressed.sync="myToggle" variant="info" font-scale="2" icon="chevron-up"></b-icon>
+                  <b-icon variant="info" font-scale="2" icon="chevron-up"></b-icon>
                 </b-link>
                 <b-link class="p-2">
                   <b-icon variant="secondary" font-scale="2" icon="chevron-down"></b-icon>
@@ -37,7 +39,6 @@ export default {
   name: 'Test',
   data() {
     return {
-      myToggle: false,
       items: [{
           titulo: 'Vicentin. Dura advertencia de los empresarios al Gobierno por la intervención',
           periodo: '9/06/2020 • 21:58',
