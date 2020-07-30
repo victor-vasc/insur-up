@@ -2,9 +2,9 @@
 <div id="app">
   <!-- <Navbar/> -->
   <Sidebar/>
-  <b-container class="">
+  <b-container fluid="lg" class="">
     <b-row>
-      <b-col col-sm="12">
+      <b-col col-sm="12" col-lg="8"  col-xl="8">
         <b-row>
           <SearchField />
         </b-row>

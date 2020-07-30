@@ -1,34 +1,30 @@
 <template>
 <div id="app">
-  <div class="custom-navbar">
-    <b-nav tabs class="ml-5 pl-5 align-bottom d-flex align-items-end">
-      <b-nav-item v-for="tab in tabs"
-                  v-bind:key="tab.name"
-                  v-bind:class="['tab-button', { active: currentTab.name === tab.name }]"
-                  v-on:click="currentTab = tab"
-                  class="mt-4 mb-2 mr-2 subtitle align-bottom "
-                  variant="dark">
-        {{ tab.name }}
-      </b-nav-item>
-    </b-nav>
-  </div>
-  <keep-alive>
-    <component v-bind:is="currentTab.component" class="tab"></component>
-  </keep-alive>
+  <b-container>
+    <div class="custom-navbar d-flex justify-content-center justify-content-sm-start">
+      <b-nav tabs class="align-bottom d-flex align-items-end">
+        <b-nav-item v-for="tab in tabs" v-bind:key="tab.name" v-bind:class="['tab-button', { active: currentTab.name === tab.name }, {disabled: tabs[1]}]" v-on:click="currentTab = tab" class="mt-1 mb-2 mr-2 subtitle align-bottom " variant="dark">
+          {{ tab.name }}
+        </b-nav-item>
+      </b-nav>
+    </div>
+    <keep-alive>
+      <component v-bind:is="currentTab.component" class="tab"></component>
+    </keep-alive>
+  </b-container>
 </div>
 </template>
 
 <script>
-import Dashboard from './Dashboard.vue'
+import Dashboard from './Dashboard.vue';
+import ReferencesRequest from './components/ReferencesRequest.vue'
 var tabs = [{
     name: "Dashboard",
     component: Dashboard,
   },
   {
     name: "Resultado da busca",
-    component: {
-      template: "<div>Posts component</div>"
-    }
+    component: ReferencesRequest,
   },
   // {
   //   name: "Archive",
@@ -43,8 +39,11 @@ export default {
   data() {
     return {
       tabs: tabs,
-      currentTab: tabs[0]
+      currentTab: tabs[0],
     }
+  },
+  mounted() {
+    document.getElementsByClassName("subtitle")[1].firstChild.classList.add("disabled")
   }
 }
 </script>
@@ -75,11 +74,22 @@ export default {
 }
 
 .custom-navbar .nav-tabs :not(.active) a {
-color: rgba(255, 255, 255, 0.5)!important;
-font-size:18px;
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 18px;
 }
 
 .custom-navbar .nav-tabs a {
-  color: white
+  color: white;
 }
+
+/* Small devices (mobile, 576px and up) */
+@media (max-width: 575.98px) {
+  .custom-navbar .nav-link {
+    font-size: 18px;
+  }
+  .custom-navbar .nav-tabs :not(.active) a {
+    font-size: 14px;
+  }
+}
+
 </style>

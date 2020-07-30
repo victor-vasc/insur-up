@@ -66,8 +66,8 @@
 export default {
   data() {
     return {
-      value: ['apple', 'orange', 'banana'],
-      value2: ['pera', 'uva', 'abacaxi']
+      value: [''],
+      value2: ['']
     }
   }
 }

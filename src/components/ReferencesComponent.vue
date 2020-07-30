@@ -37,27 +37,27 @@ export default {
       },
       { titulo: 'Aportes de campaña y deudas. Las claves del vínculo de Vicentin con el macri...',
         periodo: '10/06/2020 • 09:39',
-        fonte: 'Fonte: CLARÍN ',
+        fonte: 'CLARÍN ',
         conteudo:'Corría noviembre de 2010, pocos días antes de su casamiento con Juliana Awada, cuando Mauricio Macri llegó aeropuerto de Reconquista, en Santa Fe. En la piel de jefe de...'
       },
       { titulo: 'Vicentin. Dura advertencia de los empresarios al Gobierno por la intervención',
         periodo:'9/06/2020 • 21:58',
-        fonte: 'Fonte: LA NACION ',
+        fonte: 'LA NACION ',
         conteudo:"La Asociación Empresaria Argentina (AEA), la Unión Industria Argentina (UIA) y la AsociaciónCristiana de Dirigentes de Empresa (ACDE) advirtieron esta noche sobre..."
       },
       { titulo: 'Aportes de campaña y deudas. Las claves del vínculo de Vicentin con el macri...',
         periodo: '10/06/2020 • 09:39',
-        fonte: 'Fonte: CLARÍN ',
+        fonte: 'CLARÍN ',
         conteudo:'Corría noviembre de 2010, pocos días antes de su casamiento con Juliana Awada, cuando Mauricio Macri llegó aeropuerto de Reconquista, en Santa Fe. En la piel de jefe de gobierno...'
       },
       { titulo: 'Vicentin. Dura advertencia de los empresarios al Gobierno por la intervención',
         periodo:'9/06/2020 • 21:58',
-        fonte: 'Fonte: LA NACION ',
+        fonte: 'LA NACION ',
         conteudo:"La Asociación Empresaria Argentina (AEA), la Unión Industria Argentina (UIA) y la AsociaciónCristiana de Dirigentes de Empresa (ACDE) advirtieron esta noche sobre..."
       },
       { titulo: 'Aportes de campaña y deudas. Las claves del vínculo de Vicentin con el macri...',
         periodo: '10/06/2020 • 09:39',
-        fonte: 'Fonte: CLARÍN ',
+        fonte: 'CLARÍN ',
         conteudo:'Corría noviembre de 2010, pocos días antes de su casamiento con Juliana Awada, cuando Mauricio Macri llegó aeropuerto de Reconquista, en Santa Fe. En la piel de jefe de gobierno...'
       },
     ]

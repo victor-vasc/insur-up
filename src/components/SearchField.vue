@@ -1,7 +1,7 @@
 <template>
 <b-col class="search-component mb-2">
   <div class="d-flex justify-content-between mt-3" style="color:white;  font-size:24px">
-    <b-button v-b-toggle.sidebar-1 size="sm" variant="dark" class="d-md-none d-block float-left position-fixed">Filtros<b-icon icon="filter" class="ml-1"></b-icon></b-button>
+    <b-button v-b-toggle.sidebar-1 size="sm" variant="dark" class="d-md-none d-block float-left sticky-top">Filtros<b-icon icon="filter" class="ml-1"></b-icon></b-button>
     <p class="bullet-menu align-middle mb-0 float-right position-absolute"><b-icon-three-dots></b-icon-three-dots></p>
   </div>
   <b-img class="mt-3 mx-auto pt-2 mb-3 w-75 logo" src="../assets/logo.jpg" fluid alt="Responsive image"></b-img>
@@ -77,13 +77,5 @@ position:absolute;
 right:20px;
 top:10px;
 }
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .w-80 {
-    width: 80%!important;
-  }
-  .logo{
-    width:50%!important;
-  }
-}
+
 </style>
