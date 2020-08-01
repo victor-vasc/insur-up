@@ -15,14 +15,7 @@
                   <spam>{{ item.periodo}}</spam>
                 </h6>
               </b-col>
-              <b-col cols="5" class="rating align-self-center d-flex justify-content-lg-end justify-content-sm-start pr-4">
-                <b-link class="p-2">
-                  <b-icon variant="info" font-scale="2" icon="chevron-up"></b-icon>
-                </b-link>
-                <b-link class="p-2">
-                  <b-icon variant="secondary" font-scale="2" icon="chevron-down"></b-icon>
-                </b-link>
-              </b-col>
+              <RatingComponent />
               <b-col cols="auto" class="mt-1 references-content-object w-50">{{ item.conteudo }}</b-col>
             </b-row>
           </b-col>
@@ -35,8 +28,12 @@
 </template>
 
 <script>
+import RatingComponent from './RatingComponent.vue';
 export default {
   name: 'Test',
+  components: {
+    RatingComponent
+  },
   data() {
     return {
       items: [{
