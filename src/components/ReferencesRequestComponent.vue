@@ -15,7 +15,9 @@
                   <spam>{{ item.periodo}}</spam>
                 </h6>
               </b-col>
-              <RatingComponent />
+              <b-col cols="5" class="rating align-self-center d-flex justify-content-lg-end justify-content-sm-start pr-4">
+                <RatingComponent />
+              </b-col>
               <b-col cols="auto" class="mt-1 references-content-object w-50">{{ item.conteudo }}</b-col>
             </b-row>
           </b-col>
@@ -30,7 +32,7 @@
 <script>
 import RatingComponent from './RatingComponent.vue';
 export default {
-  name: 'Test',
+  name: 'RequestComponent',
   components: {
     RatingComponent
   },
@@ -75,11 +77,6 @@ export default {
       ]
     }
   },
-  computed: {
-    btnStates() {
-      return this.buttons.map(btn => btn.state)
-    }
-  }
 }
 </script>
 
