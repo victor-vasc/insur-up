@@ -4,7 +4,7 @@
     <p class="mb-0">Filtros</p>
     <p class="mb-0 bullet-menu"><b-icon-three-dots></b-icon-three-dots></p>
   </div>
-  <hr class="">
+  <hr class="mb-0">
   <div v-bar> <!-- el1 -->
   <div class="filter-component-section"> <!-- el2 -->
     <!-- your scrollable content -->
@@ -39,6 +39,7 @@ TimeFilterComponent
 background-color: #292a2d;
 border-radius: 10px;
 font-family: Helvetica;
+min-height:245px;
 }
 .teste{
 color:white;

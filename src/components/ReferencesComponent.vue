@@ -1,6 +1,6 @@
 <template>
 <div class="">
-  <ul class="d-flex justify-content-start text-left list-object pl-2" v-for="item in items" :key="item">
+  <ul class="d-flex justify-content-start text-left list-object pl-2" v-for="item in items" :key="item.id">
     <li>
       <b-row align-v="center">
         <b-col cols="9" class="references">
@@ -32,7 +32,8 @@ export default {
     return {
       myToggle: false,
       items: [{
-          titulo: 'Vicentin. Dura advertencia de los empresarios al Gobierno por la intervención',
+          id: "1",
+          titulo: 'Dura advertencia de los empresarios al Gobierno por la intervención...',
           periodo: '9/06/2020 • 21:58',
           fonte: 'LA NACION ',
           conteudo: "La Asociación Empresaria Argentina (AEA), la Unión Industria Argentina (UIA) y la AsociaciónCristiana de Dirigentes de Empresa (ACDE) advirtieron esta noche sobre..."
@@ -41,27 +42,30 @@ export default {
           titulo: 'Aportes de campaña y deudas. Las claves del vínculo de Vicentin con el macri...',
           periodo: '10/06/2020 • 09:39',
           fonte: 'CLARÍN ',
-          conteudo: 'Corría noviembre de 2010, pocos días antes de su casamiento con Juliana Awada, cuando Mauricio Macri llegó aeropuerto de Reconquista, en Santa Fe. En la piel de jefe de...'
+          conteudo: '...Pocos días antes de su casamiento con Juliana Awada, cuando Mauricio Macri llegó aeropuerto de Reconquista, en Santa Fe. En la piel de jefe de...'
         },
         {
-          titulo: 'Vicentin. Dura advertencia de los empresarios al Gobierno por la intervención',
-          periodo: '9/06/2020 • 21:58',
+          titulo: 'Vicentin. Los empresarios al Gobierno por la intervención',
+          periodo: '11/06/2020 • 16:23',
           fonte: 'LA NACION ',
-          conteudo: "La Asociación Empresaria Argentina (AEA), la Unión Industria Argentina (UIA) y la AsociaciónCristiana de Dirigentes de Empresa (ACDE) advirtieron esta noche sobre..."
+          conteudo: "La Unión Industria Argentina (UIA) advirtieron esta noche sobre..."
         },
         {
-          titulo: 'Aportes de campaña y deudas. Las claves del vínculo de Vicentin con el macri...',
-          periodo: '10/06/2020 • 09:39',
+          id: "2",
+          titulo: 'Las claves del vínculo de Vicentin con el macri...',
+          periodo: '13/06/2020 • 16:33',
           fonte: 'CLARÍN ',
-          conteudo: 'Corría noviembre de 2010, pocos días antes de su casamiento con Juliana Awada, cuando Mauricio Macri llegó aeropuerto de Reconquista, en Santa Fe. En la piel de jefe de gobierno...'
+          conteudo: 'Corría noviembre de 2010, cuando Mauricio Macri llegó aeropuerto de Reconquista, en Santa Fe. En la piel de jefe de gobierno...'
         },
         {
+          id: "3",
           titulo: 'Vicentin. Dura advertencia de los empresarios al Gobierno por la intervención',
           periodo: '9/06/2020 • 21:58',
           fonte: 'LA NACION ',
           conteudo: "La Asociación Empresaria Argentina (AEA), la Unión Industria Argentina (UIA) y la AsociaciónCristiana de Dirigentes de Empresa (ACDE) advirtieron esta noche sobre..."
         },
         {
+          id: "4",
           titulo: 'Aportes de campaña y deudas. Las claves del vínculo de Vicentin con el macri...',
           periodo: '10/06/2020 • 09:39',
           fonte: 'CLARÍN ',

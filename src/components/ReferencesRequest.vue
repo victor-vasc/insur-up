@@ -4,7 +4,7 @@
   <b-row>
     <b-col class="mt-2 pb-2 references-field text-left">
       <div class="d-flex justify-content-between pt-1 pl-2">
-        <h5 class="mb-0 mt-2 pl-2 references-title">Resultados de busca: <h6 class="d-inline-flex mb-0">16 resultados</h6>
+        <h5 class="mb-0 mt-2 pl-2 references-title">Resultados de busca: <h6 class="d-inline-flex mb-0">6 resultados</h6>
         </h5>
         <p class="bullet-menu">
           <b-icon-three-dots></b-icon-three-dots>

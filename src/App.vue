@@ -45,7 +45,7 @@ export default {
   data() {
     return {
       tabs: tabs,
-      currentTab: tabs[1],
+      currentTab: tabs[0],
     }
   },
   mounted() {
