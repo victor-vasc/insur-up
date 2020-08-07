@@ -1,7 +1,7 @@
 <template>
 <div class="">
   <ul class="d-flex justify-content-start text-left list-object pl-2" v-for="item in items" :key="item.id">
-    <li>
+    <li class="w-100">
       <b-row align-v="center">
         <b-col cols="9" class="references">
           <h5 class="mb-0"><b>{{ item.titulo }}</b></h5>
@@ -11,7 +11,7 @@
           </div>
           <div>{{ item.conteudo }}</div>
         </b-col>
-        <b-col cols="3" class="pl-4">
+        <b-col cols="3" class="pl-4 float-right">
           <RatingComponent />
         </b-col>
       </b-row>
